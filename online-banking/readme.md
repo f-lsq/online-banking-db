@@ -17,7 +17,9 @@ After selecting the desired account, they will be taken to a page showing the pr
 
 In addition, customers can also make fund transfer to any other account *in the same bank*. They could request for a cheque book, change of `address` or stop payment of cheques. They could also view their monthly and/or annual statements, as well as print out the statements.
 
-* Assumption: The accounts are for **individual** customers (ie. not joint accounts between multiple customers)
+### Assumptions Made
+* The accounts are for **individual** customers (ie. not joint accounts between multiple customers)
+* This is a **private** online banking system (ie. caters to individuals, not other customers such as organisations)
 
 ## Main Entity of Focus
 1. Accounts
@@ -27,4 +29,5 @@ In addition, customers can also make fund transfer to any other account *in the 
 5. Balances
 
 ## Reference
-* Online Banking Database Example [Database Answer](https://web.archive.org/web/20160309042228/http://databaseanswers.org/data_models/online_banking/index.htm)
+* [Online Banking Database Example, Database Answer](https://web.archive.org/web/20160309042228/http://databaseanswers.org/data_models/online_banking/index.htm)
+* [List of Standard Lengths for Database Fields](https://stackoverflow.com/questions/20958/list-of-standard-lengths-for-database-fields)
