@@ -44,6 +44,7 @@ CREATE TABLE Account_Types (
 -- Create Accounts Table
 CREATE TABLE Accounts (
   accountId INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  accNumber VARCHAR(45) NOT NULL,
   currBalance FLOAT NOT NULL,
   dateOpened DATE NOT NULL,
   dateClosed DATE,

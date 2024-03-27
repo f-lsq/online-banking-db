@@ -1,0 +1,31 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}Accounts{{/block}}
+
+{{#block 'content'}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Current Balance</th>
+      <th>Date Opened</th>
+      <th>Account Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each accounts}}
+    <tr>
+      <td>{{this.accNumber}}</td>
+      <td>{{this.currBalance}}</td>
+      <td>{{this.dateOpened}}</td>
+      <td>{{this.account_type_id}}</td>
+      <td>
+        <a href="/accounts/{{this.customerId}}" class="btn btn-primary">View Accounts</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/block}}
+
+{{/extends}}

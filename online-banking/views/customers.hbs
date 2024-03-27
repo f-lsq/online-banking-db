@@ -1,0 +1,36 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}Customers{{/block}}
+
+{{#block 'content'}}
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Contact Number</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each customers}}
+    <tr>
+      <td>{{this.customerId}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.dateOfBirth}}</td>
+      <td>{{this.gender}}</td>
+      <td>{{this.contactNumber}}</td>
+      <td>{{this.email}}</td>
+      <td>
+        <a href="/accounts/{{this.customerId}}" class="btn btn-primary">View Accounts</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/block}}
+
+{{/extends}}

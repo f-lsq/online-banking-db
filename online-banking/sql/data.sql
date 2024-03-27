@@ -25,13 +25,13 @@ INSERT INTO Account_Types (accTypeName) VALUES
 ('Checking');
 
 -- Inserting data into Accounts
-INSERT INTO Accounts (currBalance, dateOpened, customer_id, account_type_id) VALUES
-(1000.00, '2023-01-01', 1, 1),
-(500.00, '2023-01-01', 2, 2),
-(2000.00, '2023-01-01', 3, 1),
-(1500.00, '2024-01-15', 1, 2),
-(3000.00, '2024-02-20', 2, 1),
-(2500.00, '2024-03-10', 3, 2);
+INSERT INTO Accounts (accNumber, currBalance, dateOpened, customer_id, account_type_id) VALUES
+('005-231-XXXX', 1000.00, '2023-01-01', 1, 1),
+('297-554-XXXX', 500.00, '2023-01-01', 2, 2),
+('635-762-XXXX', 2000.00, '2023-01-01', 3, 1),
+('526-633-XXXX', 1500.00, '2024-01-15', 1, 2),
+('782-535-XXXX', 3000.00, '2024-02-20', 2, 1),
+('618-130-XXXX', 2500.00, '2024-03-10', 3, 2);
 
 -- Inserting data into Balances
 INSERT INTO Balances (balDate, balAmount, account_id) VALUES
