@@ -1,0 +1,54 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}Customers{{/block}}
+
+{{#block 'content'}}
+<a href='/customers'class="btn btn-secondary mt-3 mb-3">Back</a>
+<h1>{{customerToSearch.name}}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Contact Number</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{customerToSearch.customerId}}</td>
+      <td>{{customerToSearch.name}}</td>
+      <td>{{customerToSearch.dateOfBirth}}</td>
+      <td>{{customerToSearch.gender}}</td>
+      <td>{{customerToSearch.contactNumber}}</td>
+      <td>{{customerToSearch.email}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Current Balance</th>
+      <th>Account Type</th>
+      <th>Date Opened</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each accountsToSearch}}
+    <tr>
+      <td>{{this.accNumber}}</td>
+      <td>{{this.currBalance}}</td>
+      <td>{{this.accTypeName}}</td>
+      <td>{{this.dateOpened}}</td>
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+{{/block}}
+
+{{/extends}}

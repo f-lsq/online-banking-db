@@ -1,0 +1,40 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}Accounts{{/block}}
+
+{{#block 'content'}}
+<a href='/customers'class="btn btn-secondary mt-3 mb-3">Back</a>
+<h1>{{accounts.0.name}}'s Accounts</h1>
+<form method='POST'>
+  <select name='accountTypeId' class='form-control' onchange="this.form.submit()">
+    <option value='0' selected disabled hidden>Filter by Account Type</option>
+    {{#each account_types}}
+    <option value='{{this.accountTypeId}}'>
+      {{this.accTypeName}}
+    </option>
+    {{/each}}
+  </select>
+</form>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Account Number</th>
+      <th>Current Balance</th>
+      <th>Account Type</th>
+      <th>Date Opened</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each accounts}}
+    <tr>
+      <td>{{this.accNumber}}</td>
+      <td>{{this.currBalance}}</td>
+      <td>{{this.accTypeName}}</td>
+      <td>{{this.dateOpened}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/block}}
+
+{{/extends}}

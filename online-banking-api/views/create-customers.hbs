@@ -1,0 +1,35 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}New Customer{{/block}}
+
+{{#block 'content'}}
+<a href='/customers'class="btn btn-secondary mt-3 mb-3">Back</a>
+<h1>Enter New Customer Details</h1>
+<form method='POST'>
+  <div>
+    <label for='name'>Name</label>
+    <input type='text' name='name' class='form-control' id='name'/>
+  </div>
+  <div class='mt-1'>
+    <label for='dateOfBirth'>Date of Birth</label>
+    <input type='date' name='dateOfBirth' class='form-control' id='dateOfBirth'/>
+  </div>
+  <div class='mt-1'>
+    <label for='gender'>Gender</label>
+    <input type='radio' name='gender' id='gender' value='M'/><label>Male</label>
+    <input type='radio' name='gender' id='gender' value='F'/><label>Female</label>
+  </div>
+  <div class='mt-1'>
+    <label for='contactNumber'>Contact Number</label>
+    <input type='text' name='contactNumber' class='form-control' id='contactNumber'/>
+  </div>
+  <div class='mt-1'>
+    <label for='email'>Email</label>
+    <input type='text' name='email' class='form-control' id='email'/>
+  </div>
+  <input type='submit' value='Create' class="btn btn-primary mt-3"/>
+</form>
+
+{{/block}}
+
+{{/extends}}

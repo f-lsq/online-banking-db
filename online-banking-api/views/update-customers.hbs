@@ -1,0 +1,35 @@
+{{#extends 'base'}}
+
+{{#block 'title'}}New Customer{{/block}}
+
+{{#block 'content'}}
+<a href='/customers'class="btn btn-secondary mt-3 mb-3">Back</a>
+<h1>Edit {{customerToEdit.name}}'s Details</h1>
+<form method='POST'>
+  <div>
+    <label for='name'>Name</label>
+    <input type='text' name='name' class='form-control' id='name' value='{{customerToEdit.name}}'/>
+  </div>
+  <div class='mt-1'>
+    <label for='dateOfBirth'>Date of Birth</label>
+    <input type='date' name='dateOfBirth' class='form-control' id='dateOfBirth' value='{{customerToEdit.dateOfBirth}}'/>
+  </div>
+  <div class='mt-1'>
+    <label for='gender'>Gender</label>
+    <input type='radio' name='gender' id='gender' value='M' {{#eq customerToEdit.gender 'M'}}checked{{/eq}}/><label>Male</label>
+    <input type='radio' name='gender' id='gender' value='F' {{#eq customerToEdit.gender 'F'}}checked{{/eq}}/><label>Female</label>
+  </div>
+  <div class='mt-1'>
+    <label for='contactNumber'>Contact Number</label>
+    <input type='text' name='contactNumber' class='form-control' id='contactNumber' value='{{customerToEdit.contactNumber}}'/>
+  </div>
+  <div class='mt-1'>
+    <label for='email'>Email</label>
+    <input type='text' name='email' class='form-control' id='email' value='{{customerToEdit.email}}'/>
+  </div>
+  <input type='submit' value='Save Changes' class="btn btn-primary mt-3"/>
+</form>
+
+{{/block}}
+
+{{/extends}}
